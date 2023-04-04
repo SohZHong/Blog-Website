@@ -1,0 +1,127 @@
+@import url('https://db.onlinewebfonts.com/c/a44207bfe4040f536c824dbbf82f5ed1?family=e-Ukraine');
+
+.input-container{
+    margin: 0 30px;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.btitle {
+    position: relative;
+    width: 80vw;
+    height: 3rem;
+}
+
+.shaded {
+    background-color: #fbfbfb;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.input-form > div:not(.bimage) {
+    margin: 2rem 0;
+}
+
+.word__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    font-family: "e-Ukraine";
+    font-size: inherit;
+    color: black;
+    outline: none;
+    padding: 1.25rem;
+    background-color: #fbfbfb;
+   /* Change border when input focus*/
+}
+
+.word__input:hover {
+    border-color: black; 
+    /* add if want */
+}
+
+.word__input:focus {
+    border-color: black;
+    /* add if want */
+}
+
+.word__label {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: black;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: white;
+}
+
+/* 1. When the input is in the focus state reduce the size of the label and move upwards 2. Keep label state when content is in input field */
+.word__input:focus ~ .word__label, .word__input:not(:placeholder-shown).word__input:not(:focus) ~ .word__label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+}
+
+.bcategory {
+    position: relative;
+    width: 80vw;
+    padding: 15px 23px;
+    border-radius: 10px;
+}
+
+.bcategory select {
+    margin-left: 20px;
+    font-family: "e-Ukraine";
+    font-size: 1rem;
+
+}
+
+.bcontent {
+    position: relative;
+    width: 80vw;
+    height: 15rem;
+}
+
+textarea{
+    resize: none;
+}
+
+.bimage{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+#display_image{
+    max-width: 15rem;
+    max-height: 15rem;
+}
+
+.text-right{
+    float:right;
+}
+
+.text-right input[type=submit]{
+    width: 100px;
+    height: 50px;
+    margin: 10px 0;
+    border: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+.text-right input[type=submit]:hover{
+    opacity: .8;
+}

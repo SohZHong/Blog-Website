@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+/* Header */
+.admin-header{
+    background-color: #2a2f33;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.admin-header > div{
+    padding: 8px 20px;
+}
+
+.header-logo{
+    font-size: 1.5rem;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+}
+
+.header-logo img {
+    max-width: 4vw;
+    max-height: 4vh;
+}
+
+.admin-header .link-wrapper > a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.admin-header .link-wrapper .website-btn{
+    margin-right: 100px;
+    text-decoration: underline;
+}
+
+/* Admin Sidebar */
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.side-bar .side-title{
+    font-size: 30px;
+    color: black;
+    padding: 0 10px;    
+}
+
+.side-bar .option-list {
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 26px;
+    color: #383e44;
+
+    
+}
+
+.side-bar .option-list > li{
+    line-height: 40px;
+    white-space: nowrap;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.side-bar .option-list > li:hover{
+    background: #e1e2e4;
+}
+
+.side-bar .option-list > li > a{
+    color: #5b5c5e;
+}
+
+/* Main Page */
+.grid-container{
+    display: grid;
+    grid-template-columns: 290px auto;
+    grid-gap: 3rem;
+    margin-top: 20px;
+}
+
+.row-container{
+    margin: 20px 0;
+    width: 98%;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+}
+
+.row-container h2{
+    font-size: 30px;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.row-container h3{
+    margin: 20px 0;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form > div{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.input-form > div > label{
+    display: inline-block;
+    font-weight: 600;
+    width: 200px;
+}
+
+.input-form input[type=text], input[type=email], input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+.input-form input[type=submit] {
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table{
+    width: 95%;
+}
+
+td, th {
+    text-align: left;
+    padding: 10px;
+    border-collapse: collapse;
+    overflow-x: hidden;
+}
+
+td{
+    border-bottom: 1px solid #dddddd;
+}
+
+.green-btn, .red-btn, .neutral-btn, .blue-btn {
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid rgba(27, 31, 35, .15);
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+}
+
+.green-btn:focus:not(:focus-visible), .red-btn:focus:not(:focus-visible), .neutral-btn:focus:not(:focus-visible), .blue-btn:focus:not(:focus-visible){
+    box-shadow: none;
+    outline: none;
+}
+
+.neutral-btn{
+    color: black;
+    background: #f3f3f3;
+}
+
+.neutral-btn:hover{
+    background-color: #dad6d6;
+}
+
+.neutral-btn:active{
+    background-color: #b1b1b1;
+    box-shadow: rgba(20, 46, 70, 0.2) 0 1px 0 inset;
+}
+
+.green-btn, .input-form input[type=submit]{
+    background-color: #2ea44f;
+}
+
+.green-btn:hover, .input-form input[type=submit]:hover {
+    background-color: #2c974b;
+}
+
+.green-btn:focus, .input-form input[type=submit]:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+
+.green-btn:active, .input-form input[type=submit]:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.red-btn {
+    background-color: #e24c4c;
+}
+
+.red-btn:hover {
+    background-color: #c93e3e;
+}
+
+.red-btn:focus {
+    box-shadow: rgba(164, 46, 46, 0.4) 0 0 0 3px;
+    outline: none;
+}
+
+.red-btn:active {
+    background-color: #cf2828;
+    box-shadow: rgba(70, 20, 20, 0.2) 0 1px 0 inset;
+}
+
+.blue-btn {
+    background-color: #339DFF;
+}
+
+.blue-btn:hover {
+    background-color: #198dfa;
+}
+
+.blue-btn:focus {
+    box-shadow: rgba(68, 164, 255, 0.4) 0 0 0 3px;
+    outline: none;
+}
+
+.blue-btn:active {
+    background-color: #198dfa;
+    box-shadow: rgba(20, 29, 70, 0.2) 0 1px 0 inset;
+}
+  

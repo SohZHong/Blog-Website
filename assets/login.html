@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Login Page</title>
+        <link rel="stylesheet" href="style/login.css">
+        
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="popup-tnc">
+            </div>
+
+            <div class="form signin-container">
+                <form action="../admin/redirect-user.php" method="post">
+                    <h1 style="margin-bottom: 30px;">Sign In to AgriLah!</h1>
+                    <input type="hidden" name="action" value="login"/>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <a href="forgotpass.php"><span>Forgot Your Password?</span></a>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div class="form signup-container">
+                <form onsubmit="return validate_user()" action="security-quest.php" method="post">
+                    <h1>Create Account</h1>
+                    <input type="text" name="fname" placeholder="First Name">
+                    <input type="text" name="lname" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <input type="password" id="password2" name="password2" placeholder="Confirm Password" required>
+                    <div class="tnc">
+                        <input type="checkbox" id="tnc-agreement" value="t&c agreement" required style="width: 15px;">
+                        <label><a href="t&c.php" target="_blank">Agree to the <span>Terms and Conditions</span></a></label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-sec overlay-left">
+                        <img src="images/Logo_white.png" href="#">
+                        <h1> Welcome Back!</h1>
+                        <p>Login to stay connected with the community by entering your personal info.</p>
+                        <button class="ghost" id="SignIn">SIGN IN</button>
+                    </div>
+                    <div class="overlay-sec overlay-right">
+                        <img src="images/Logo_white.png" href="#">
+                        <h1>Hello, Friend</h1>
+                        <p>Register an account with your personal info and join our community!</p>
+                        <button class="ghost" id="SignUp">SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/login.js"></script>
+    </body>
+</html>

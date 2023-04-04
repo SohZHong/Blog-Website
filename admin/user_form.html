@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add User</title>
+    </head>
+
+    <body>
+        <h2>Add New User</h2>
+        <h3>Create a brand new user and add them to this site</h3>
+        <form class="input-form" onsubmit="return validate_user()" action="update-user.php" method="post">
+            <input type="hidden" name="action" value="add"/>
+            <div>
+                <label for="email">Email *</label>
+                <input type="email" name="email" required/>
+            </div>
+            <div>
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" required/>
+            </div>
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" name="fname"/>
+            </div>
+            <div>
+                <label for="lname">Last Name *</label>
+                <input type="text" name="lname" required/>
+            </div>
+            <div>
+                <label for="role">Role *</label>
+                <select name="role" required>
+                    <option value="">Please select</option>
+                    <option value="admin">Administrator</option>
+                    <option value="user">User</option>
+                </select>
+            </div>
+            <div>
+                <label for="securityquest">Security Question *</label>
+                <select name="securityquest">
+                    <option value="">--- Selection ---</option>
+                    <option value="Q1">In what city were you born?</option>
+                    <option value="Q2">What is the name of your favorite pet?</option>
+                    <option value="Q3">What is your mother's maiden name?</option>
+                    <option value="Q4">What high school did you attend?</option>
+                    <option value="Q5">What was the make of your first car?</option>
+                  </select>
+            </div>
+            <div>
+                <label for="securityanswer">Security Answer *</label>
+                <input id="securityanswer" type="text" name="securityanswer">
+            </div>
+            <div>
+                <input type="submit" value="Add User"/>
+            </div>
+        </form>
+
+        <script>
+            function validate_user(){
+                let password = document.getElementById("password");
+                let valid_status = true;
+                let statusmsg;
+
+                if(password.value.length < 7){
+
+                    statusmsg = ("Password length must be more than 7 characters!");
+
+                };
+                
+                if (statusmsg){
+                    valid_status = false;
+                    alert(statusmsg);
+                };
+
+                return valid_status;
+            };
+        </script>
+    </body>
+</html>
