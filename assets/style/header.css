@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://db.onlinewebfonts.com/c/a44207bfe4040f536c824dbbf82f5ed1?family=e-Ukraine');
+
+html{
+    min-height: 100vh;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Header CSS */
+.hero-header {
+    position: sticky;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: "e-Ukraine";
+    width: 100%;
+    flex-grow: 1;
+    padding: 10px 0;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.hero-header > div {
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.header-left {
+    width: 30%;
+}
+
+.header-middle {
+    width: 45%;
+}
+
+.header-right {
+    width: 25%;
+}
+
+/* Header Left */
+.header-logo{
+    font-size: 2rem;
+    color: black;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.header-logo img, .footer-logo img{
+    max-width: 6vw;
+    max-height: 6vh;
+}
+
+.header-create {
+    margin-left: 1rem;
+    width: 35%;
+
+}
+
+.blog-create{
+    align-items: center;
+    border-radius: 20px;
+    background-color: #e7e5e5;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    padding: 0 1rem;
+}
+
+.blog-create:hover{
+    opacity: .7;
+}
+
+.blog-create > span {
+    margin-left: 1.3rem;
+    font-size: 1rem;
+    color: #6d6e70;
+}
+
+.blog-create .fa {
+    font-size: 1.3rem;
+    color: #6d6e70;
+}
+
+/* Header Middle*/
+.header-search-form {
+    border-radius: 20px;
+    font-size: 1.5rem;
+    width: 44vw;
+    padding: 10px 0;
+    outline: 1px solid #6d6e70;
+}
+
+.header-search-form > form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header-search-form > form > label > i{
+    color: #6d6e70;
+    cursor: pointer;
+}
+
+#header-search-bar {
+    width: 93%;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    line-height: 20px;
+    margin-left: 14px;
+    font-size: 1.3rem;
+    opacity: 1;
+}
+
+/* Header Right */
+.header-selection {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.header-selection > a {
+    font-size: 1.5rem;
+}
+
+.header-selection .fa {
+    font-size: 2.2rem;
+}
+
+.side-bar, .main{
+    font-family: "e-Ukraine";
+}
+
+/* Dropdown Menu */
+.dropmenu:hover, .dropmenu:focus {
+    color: #e7e5e5;
+}
+
+.dropcontent {
+    right: 4px;
+    left:auto;
+    display: none;
+    position: absolute;
+    background-color: #fbfbfb;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropcontent > * {
+    color: #1D1E22;
+    padding: 12px 16px;
+    display: block;
+    overflow: hidden;
+}
+
+.dropcontent > *:hover {
+    background-color: #ddd;
+}
+
+.dropcontent.drop {
+    display: block;
+}
+
+
+/* Side Bar */
+.side-bar {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fbfbfb;
+}
+
+.side-bar .sidebar-menu .sidebar-list{
+    list-style: none;
+    color: #868686;
+    padding: 20px 50px;
+    transition: .2s ease-in-out;
+}
+
+.sidebar-list-item > *{
+    color: #868686;
+}
+
+.side-bar .sidebar-menu .sidebar-list.active, .side-bar .sidebar-menu .sidebar-list:hover{
+    border-left: 4px solid #3b72ff;
+}
+
+.side-bar .sidebar-menu .sidebar-list:hover .sidebar-list-item > span, .side-bar .sidebar-menu .sidebar-list.active .sidebar-list-item > span{
+    color: #1D1E22;
+    transition: .2s ease-in-out;
+}
+
+.side-bar .sidebar-menu .sidebar-list:hover .sidebar-list-item > i, .side-bar .sidebar-menu .sidebar-list.active .sidebar-list-item > i{
+    color: #3b72ff;
+}
+
+/* Read More Button */
+.read-more-btn {
+    line-height: 1em;
+    letter-spacing: 0.06em;
+    font-family: 'Lato', sans-serif;
+    font-size: .7rem;
+    color:#fff;
+    background: #231f20;
+    padding: 5px 2px 5px 5px;
+    border-radius: 4px;
+    transition: background 200ms;
+}
+
+.read-more-btn:after {
+    font-family: 'FontAwesome', sans-serif;
+    font-weight:300;
+    content: "\f105";
+    margin-left:20px;
+    color:#cea052;
+    font-size: 15px;
+    vertical-align:middle;
+    transition:color 200ms;
+}
+
+.read-more-btn:hover{
+    background:#cea052;
+}
+
+.read-more-btn:hover:after{
+    color:#231f20;
+}
+
+/* Blog Home Page */
+
+.main{
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.main .grid-container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 250px auto;
+    grid-gap: 3rem;
+}

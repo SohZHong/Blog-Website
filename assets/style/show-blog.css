@@ -1,0 +1,64 @@
+.content-container {
+    width: 75vw;
+    padding: 15px;
+}
+
+.content-details > *{
+    margin: 10px 0;
+}
+
+.detail > div{
+    font-size: 0.9rem;
+    color: grey;
+    margin: 5px 0;
+}
+
+.content-thumbnail{
+    justify-content: center;
+}
+
+.content-thumbnail > img{
+    max-width: 600px;
+    margin: auto;
+}
+
+.content{
+    word-wrap: break-word;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.comments-container {
+    margin-top: 120px;
+ }
+ 
+ .comment {
+    width: 40%;
+    height: 50px;
+    padding: 10px;
+    background-color: inherit;
+    resize: none;
+    font-family: inherit;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+ 
+ .submitBtn {
+    position: relative;
+    left: -70;
+    top: -29;
+ }
+ 
+ .comment-content {
+    word-wrap: break-word;
+    width: 90%;
+ 
+    margin-top: 8px;
+ }
+ 
+ hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
