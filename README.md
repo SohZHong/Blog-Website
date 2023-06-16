@@ -1,4 +1,4 @@
-**Blogging Website - PHP, JavaScript, HTML, and CSS******
+**Blogging Website - PHP, JavaScript, HTML, and CSS**
 
 Description:
 This repository contains the code for a feature-rich blogging website built using PHP, JavaScript, HTML, and CSS. The website offers a platform for users to create, manage, and interact with blogs on various topics. It includes functionalities such as notifications, password retrieval with security questions, topic filtering, blog creation and management, and blog commenting.
